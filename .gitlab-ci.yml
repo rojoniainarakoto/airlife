@@ -3,6 +3,11 @@ workflow:
     - if: $CI_COMMIT_BRANCH != "main" && $CI_PIPELINE_SOURCE != "merge_request_event"
       when: never
     - when: always
+variables:
+  IMAGE_NAME: $CI_REGISTRY_IMAGE
+  IMAGE_TAG: "1.0"
+  DEV_SERVER_HOST: 129.151.181.166
+  DEV_ENDPOINT: http://129.151.181.166:3000
 
 stages:
 - test
@@ -13,3 +18,13 @@ sast:
   stage: test
 include:
 - template: Security/SAST.gitlab-ci.yml
+
+build:
+  tags:
+    - oracle
+    - remote
+    - shell
+  artifacts:
+    reports:
+      dotenv: build.env
+
