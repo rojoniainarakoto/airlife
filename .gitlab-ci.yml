@@ -23,9 +23,9 @@ sast:
 
 build:
   tags:
+    - docker
     - oracle
     - remote
-    - shell
   artifacts:
     reports:
       dotenv: build.env
