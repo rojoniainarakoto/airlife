@@ -3,7 +3,7 @@ build:
   before_script: 
     - export PACKAGE_JSON_VERSION=$(cat ./package.json | jq -r .version)
     - export VERSION=$PACKAGE_JSON_VERSION.$CI_PIPELINE_IID
-    - echo $VERSION >> build.env
+    - echo $VERSION > build.env
     - export IMAGE_NAME=$CI_REGISTRY_NAME
   script:
     - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWWORD $CI_REGISTRY
