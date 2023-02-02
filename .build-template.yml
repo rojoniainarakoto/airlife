@@ -5,6 +5,6 @@ build:
     - export VERSION=$PACKAGE_JSON_VERSION.$CI_PIPELINE_IID
     - export IMAGE_NAME=$CI_REGISTRY_NAME
   script:
-    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWWORD $CI_REGISTRY
+    - echo $CI_REGISTRY_PASSWORD | docker login -u $CI_REGISTRY_USER --password-stdin $CI_REGISTRY
     - docker build -t $IMAGE_NAME:$VERSION .
     - docker push $IMAGE_NAME:$VERSION
