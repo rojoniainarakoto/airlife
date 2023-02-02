@@ -27,9 +27,6 @@ build:
     - docker
     - oracle
     - remote
-  before_script:
-    - sudo apt-get install jq
-  artifacts:
-    reports:
-      dotenv: build.env
+
+
 
