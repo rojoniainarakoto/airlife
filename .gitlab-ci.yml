@@ -25,6 +25,3 @@ build:
   tags:
     - local
     - parrot
-  artifacts:
-    reports:
-      dotenv: build.env
