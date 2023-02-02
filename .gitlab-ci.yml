@@ -22,6 +22,12 @@ sast:
   stage: test
 
 build:
+  tags:
+    - docker
+    - oracle
+    - remote
+  before_script:
+    - apt-get install jq
   artifacts:
     reports:
       dotenv: build.env
