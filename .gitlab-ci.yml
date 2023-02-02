@@ -22,10 +22,6 @@ sast:
   stage: test
 
 build:
-  tags:
-    - oracle
-    - remote
-    - shell
   artifacts:
     reports:
       dotenv: build.env
