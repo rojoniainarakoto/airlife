@@ -2,7 +2,7 @@ build:
   stage: build
   before_script: 
     - export VERSION=1.$CI_PIPELINE_IID
-    - export IMAGE_NAME=$CI_REGISTRY_NAME
+    - export IMAGE_NAME=$CI_REGISTRY_NAME/asa
   script:
     - echo $CI_REGISTRY_PASSWORD | docker login -u $CI_REGISTRY_USER --password-stdin $CI_REGISTRY
     - docker build -t $IMAGE_NAME:1.0 .
