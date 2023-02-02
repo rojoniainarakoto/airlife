@@ -28,7 +28,7 @@ build:
     - oracle
     - remote
   before_script:
-    - apt-get install jq
+    - sudo apt-get install jq
   artifacts:
     reports:
       dotenv: build.env
