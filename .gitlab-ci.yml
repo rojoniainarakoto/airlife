@@ -22,7 +22,7 @@ sast:
   stage: test
 
 build:
-  image: alpine:3.14
+  image: ubuntu:20.04
   tags:
     - docker
     - oracle
