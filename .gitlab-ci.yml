@@ -28,5 +28,5 @@ build:
     - remote
   artifacts:
     reports:
-      dotenv: /builds/stepbysteps/e-learning-back
+      dotenv: build.env
 
