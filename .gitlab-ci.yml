@@ -31,7 +31,7 @@ build_image:
     - export VERSION=$PACKAGE_JSON_VERSION.$CI_PIPELINE_IID
     - echo $VERSION > version-file.txt
   script:
-    - docker build -t '$IMAGE_NAME:$VERSION' .
+    - docker build -t "$IMAGE_NAME:$VERSION" .
   artifacts:
     paths:
       - version-file.tx
