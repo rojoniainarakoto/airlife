@@ -27,6 +27,7 @@ build_image:
     - local
     - parrot
   before_script:
+    - echo "Ty ilay ilaiko $CI_REGISTRY"
     - export PACKAGE_JSON_VERSION=$(cat package.json | jq -r .version)
     - export VERSION=$PACKAGE_JSON_VERSION.$CI_PIPELINE_IID
     - echo $VERSION > version-file.txt
