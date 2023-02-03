@@ -49,7 +49,7 @@ push_image:
     - export VERSION = $(cat version-file.txt)
     - echo $CI_REGISTRY_PASSWORD | docker login -u $CI_REGISTRY_USER --password-stdin $CI_REGISTRY
   script:
-    - docker push $IMAGE_NAME:$VERSION
+    - docker push $IMAGE_NAME:v$VERSION
 
 deploy_to_server:
   stage: deploy
