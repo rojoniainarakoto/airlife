@@ -9,7 +9,7 @@ workflow:
     - when: always
 
 variables:
-  IMAGE_NAME: $CI_PROJECT_NAME
+  IMAGE_NAME: registry.gitlab.com/stepbysteps/$CI_PROJECT_NAME
   DEV_SERVER_HOST: 129.151.181.166 
   DEV_ENDPOINT: http://129.151.181.166:3000
 
