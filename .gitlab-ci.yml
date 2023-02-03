@@ -68,8 +68,8 @@ deploy_to_server:
         export DC_IMAGE_NAME=$IMAGE_NAME &&
         export DC_IMAGE_TAG=$VERSION &&
 
-        docker-compose down &&
-        docker-compose up -d"
+        docker compose down &&
+        docker compose up -d"
   environment:
     name: development
     url: $DEV_ENDPOIN
