@@ -9,7 +9,7 @@ workflow:
     - when: always
 
 variables:
-  IMAGE_NAME: $CI_REGISTRY_NAME
+  IMAGE_NAME: $CI_PROJECT_NAME
   DEV_SERVER_HOST: 129.151.181.166 
   DEV_ENDPOINT: http://129.151.181.166:3000
 
@@ -32,9 +32,9 @@ build_image:
     - export VERSION=$PACKAGE_JSON_VERSION.$CI_PIPELINE_IID
     - echo " ity ilay version $PACKAGE_JSON_VERSION.$CI_PIPELINE_IID"
     - echo $VERSION > version-file.txt
-    - echo "ito indray ilay anarana feno $IMAGE_NAME:v$VERSION"
+    - echo "ito indray ilay anarana feno $IMAGE_NAME:$VERSION"
   script:
-    - docker build -t "$IMAGE_NAME:v$VERSION" .
+    - docker build -t "$IMAGE_NAME:$VERSION" .
   artifacts:
     paths:
       - version-file.tx
@@ -50,7 +50,7 @@ push_image:
     - export VERSION = $(cat version-file.txt)
     - echo $CI_REGISTRY_PASSWORD | docker login -u $CI_REGISTRY_USER --password-stdin $CI_REGISTRY
   script:
-    - docker push $IMAGE_NAME:v$VERSION
+    - docker push $IMAGE_NAME:$VERSION
 
 deploy_to_server:
   stage: deploy
