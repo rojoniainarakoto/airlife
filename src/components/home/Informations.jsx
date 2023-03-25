@@ -1,19 +1,21 @@
 import React from 'react';
-import Laptop from '../../assets/laptop.jpg';
+import { achat } from '../../assets';
 
 const Informations = () => {
   return (
-    <div className='w-full bg-white py-16 px-4'>
+    <div className='w-full bg-gradient-to-r from-[#117879] to-[#1D00BC] py-16 px-4'>
         <div className='max-w-[1240px] mx-auto grid md:grid-cols-2'>
-        <img className='w-[500px] mx-auto my-4' src={Laptop} alt="/" />
+        <img className='w-[500px] mx-auto my-4' src={achat} alt="achat" />
         <div className='flex flex-col justify-center'> 
-            <p className='text-[#00df9a] font-bold uppercase'>Apprendre pas à pas</p>
-            <h1 className='md:text-4xl sm:text-3xl text-2xl font-bold py-2'>Avec des exersices et des labs </h1>
-            <p>
-                Infrastructure as code : utiliser des outils de provisionnement d'infrastructure tels que 
-                Terraform ou CloudFormation pour décrire l'infrastructure souhaitée sous forme de code, 
-                et provisionner cette infrastructure automatiquement sur les plateformes cloud.</p>
-            <button className='bg-black text-[#00df9a] w-[200px] rounded-md font-medium my-6 mx-auto py-2'>En savoir plus</button>
+            <p className='text-[#9DFDFF] font-bold uppercase'>Faites vos courses comme si vous étiez sur place sans vous déplacer.</p>
+            <h1 className='md:text-4xl sm:text-3xl text-2xl font-bold py-2 text-white'> </h1>
+            <p className='text-white'>
+            Sur cette plateforme, vous pouvez faire tout ce que vous souhaitez sans vous déplacer. 
+            Nous vous offrons un large choix d'articles, d'hôtels et même de moyens de transport. 
+            Notre application est conçue pour répondre aux différents besoins de votre vie quotidienne. 
+            Payez facilement avec votre compte <strong>Airtel Money</strong>
+                </p>
+            <button className='bg-[#9DFDFF] text-black w-[200px] rounded-md font-medium my-6 mx-auto py-2'>En savoir plus</button>
         </div>
     </div>
     </div>
