@@ -3,9 +3,29 @@ import { logo, background } from '../../assets';
 
 const Signup = () => {
 
+    const [nom, setNom] = useState('');
+    const [prenom, setPrenom] = useState('');
+    const [phone, setPhone] = useState('');
+    const [mail, setMail] = useState('');
     const [password, setPassword] = useState("");
     const [confirmPwd, setConfirmPwd] = useState("");
     const [message, setMessage] = useState("");
+
+    const handleChangeNom = (event) =>{
+        setNom(event.target.value);
+    }
+
+    const handleChangePrenom = (event) => {
+        setPrenom(event.target.value);
+    }
+
+    const handleChangePhone = (event) => {
+        setPhone(event.target.value)
+    }
+
+    const handleChangeMail = (event) => {
+        setMail(event.target.value)
+    }
 
     const handlePasswordChange = (event) => {
         setPassword(event.target.value);
@@ -47,30 +67,44 @@ const Signup = () => {
                     <div className='flex flex-col py-2 text-white mb-0'>
                         <label className='text-white'>Nom</label>
                         <input className='p-2 rounded-lg mt-2 focus:border-blue-500
-                          focus:outline-none text-black text-bold' type="text" 
+                          focus:outline-none text-black text-bold' type="text"
+                          value={nom} onChange={handleChangeNom}
                           />
                     </div>
                     <div className='flex flex-col py-2 text-white mb-0'>
                         <label className='text-white'>Prenom</label>
                         <input className='p-2 rounded-lg mt-2 focus:border-blue-500
-                          focus:outline-none text-black text-bold' type="text" />
+                          focus:outline-none text-black text-bold' type="text"
+                          value={prenom} onChange={handleChangePrenom}
+                          />
                     </div>
                 </div>
                 <div className='flex flex-col text-gray-400 py-2 mb-0'>
                     <label className='text-white'>Numéro téléphone</label>
-                    <input className='rounded-lg mt-2 p-2 focus:border-blue-500
-                      focus:outline-none text-black text-bold' type="text" />
+                    <input 
+                    name='phone'
+                    id='phone'
+                    className='rounded-lg mt-2 p-2 focus:border-blue-500
+                      focus:outline-none text-black text-bold' type="text"
+                      value={phone} onChange={handleChangePhone}
+                      />
                 </div>
                 <div className='flex flex-col text-gray-400 py-2 mb-0'>
                     <label className='text-white'>E-mail</label>
-                    <input className='rounded-lg mt-2 p-2 focus:border-blue-500
-                      focus:outline-none text-black text-bold' type="text" />
+                    <input 
+                    name='mail'
+                    id='mail'
+                    className='rounded-lg mt-2 p-2 focus:border-blue-500
+                      focus:outline-none text-black text-bold' type="text"
+                      value={mail} onChange={handleChangeMail}
+                      />
                 </div>
                 <div className='grid grid-cols-1 sm:grid-cols-2 gap-x-3'>
                     <div className='flex flex-col py-2 text-white mb-0'>
                         <label className='text-white'>Mot de passe</label>
                         <input
                             name='password'
+                            id='password'
                             type="password"
                             className="p-2 rounded-lg mt-2 focus:border-blue-500
                              focus:outline-none text-black text-bold"
@@ -81,6 +115,7 @@ const Signup = () => {
                         <label className='text-white'>Confirmation Mot de passe</label>
                         <input
                             name='confirmPwd'
+                            id='confirmPwd'
                             type="password"
                             className="p-2 rounded-lg mt-2 focus:border-blue-500
                              focus:outline-none text-black text-bold"

@@ -31,12 +31,12 @@ export default function Login() {
   return (
     <div className='grid grid-cols-1 sm:grid-cols-2 h-screen w-full text-white'>
         <div className="hidden sm:block w-full h-screen bg-no-repeat bg-cover bg-opacity-30 text-white" style={{backgroundImage: `url(${background})`}}>
-            <img className='bg-center mx-auto mt-10 w-[290px] h-[170px]]' src={logo} alt="logo" />
+            <img className='bg-center mx-auto mt-10 w-[290px] h-[170px]' src={logo} alt="logo" />
             
         </div>
 
         <div className='bg-gradient-to-r from-[#14028E] to-[#1D00BC] justify-center bg-transparent'>
-            <form className='max-w-[400px] w-full mx-auto rounded-lg bg-transparent mt-6' onSubmit={handleSubmit()}>
+            <form className='max-w-[400px] w-full mx-auto rounded-lg bg-transparent mt-6' onSubmit={handleSubmit}>
                 <h4 className='text-3xl dark:text-white text-bold text-center mb-2'>S'identier</h4>
                 <div className='flex flex-col text-gray-400 py-2 mt-10'>
                     <label className='text-white'>E-mail</label>
