@@ -9,7 +9,7 @@ import Newsletter from './Newsletter';
 const Home = () => {
     return (
         <>
-            <Navbar className="z-10"/>
+            <Navbar/>
             <Hero />
             <Informations />
             <Newsletter />

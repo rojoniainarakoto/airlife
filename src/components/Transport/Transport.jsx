@@ -1,8 +1,8 @@
-import React from 'react'
-import Footer from '../Footer'
-import Navbar from '../Navbar'
-import HeroTransport from './HeroTransport'
-import Comperatives from './Comperatives'
+import React from 'react';
+import Footer from '../Footer';
+import Navbar from '../Navbar';
+import HeroTransport from './HeroTransport';
+import Comperatives from './Comperatives';
 
 const Transport = () => {
   return (

@@ -7,6 +7,7 @@ import achat from "./achat.png";
 import Exchange from "./Exchange.png";
 import tourisme from "./tourisme.png";
 import transport from "./transport.png"
+import TransportB from "./TransportB.png";
 
 
 export {
@@ -19,4 +20,5 @@ export {
     Exchange,
     tourisme,
     transport,
+    TransportB,
 };

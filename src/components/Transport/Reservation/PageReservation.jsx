@@ -1,122 +1,177 @@
 import Navbar from "../../Navbar";
 import Footer from "../../Footer";
+import { background } from "../../../assets";
 
 const PageReservation = () => {
+  const now = new Date().toISOString().slice(0, 16);
 
   return (
     <>
-    <Navbar/>
-    <div class="min-h-screen p-6 bg-gray-100 flex items-center justify-center">
-  <div class="container max-w-screen-lg mx-auto">
-    <div>
-
-      <div class="bg-white rounded shadow-lg p-4 px-4 md:p-8 mb-6">
-        <div class="grid gap-4 gap-y-2 text-sm grid-cols-1 lg:grid-cols-3">
-          <div class="text-gray-600">
-            <p class="font-medium text-lg">Reservation</p>
-            <p>Mode de payement: Airtel Money</p>
-          </div>
-
-          <div class="lg:col-span-2">
-            <div class="grid gap-4 gap-y-2 text-sm grid-cols-1 md:grid-cols-5">
-              <div class="md:col-span-5">
-                <label for="full_name">Full Name</label>
-                <input type="text" name="full_name" id="full_name" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50"  />
+      <div
+        className="w-full h-screen bg-no-repeat bg-cover bg-opacity-30 text-white"
+        style={{ backgroundImage: `url(${background})` }}
+      >
+        <Navbar />
+        <div class="flex items-center justify-center p-2">
+          <div class="mx-auto w-full max-w-[550px]">
+            <form action="" method="POST">
+              <div class="-mx-3 flex flex-wrap">
+                <div class="w-full px-3 sm:w-1/2">
+                  <div class="mb-5">
+                    <label
+                      for="fName"
+                      class="mb-3 block text-base font-medium text-white"
+                    >
+                      Nom
+                    </label>
+                    <input
+                      type="text"
+                      name="fName"
+                      id="fName"
+                      placeholder="First Name"
+                      class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+                    />
+                  </div>
+                </div>
+                <div class="w-full px-3 sm:w-1/2">
+                  <div class="mb-5">
+                    <label
+                      for="lName"
+                      class="mb-3 block text-base font-medium text-white"
+                    >
+                      Prenom
+                    </label>
+                    <input
+                      type="text"
+                      name="lName"
+                      id="lName"
+                      placeholder="Last Name"
+                      class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+                    />
+                  </div>
+                </div>
               </div>
-
-              <div class="md:col-span-5">
-                <label for="email">Email Address</label>
-                <input type="text" name="email" id="email" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50"  placeholder="email@gmail.com" />
-              </div>
-
-              <div class="md:col-span-3">
-                <label for="address">Address / Street</label>
-                <input type="text" name="address" id="address" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50"  placeholder="" />
-              </div>
-
-              <div class="md:col-span-2">
-                <label for="city">City</label>
-                <input type="text" name="city" id="city" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50"  placeholder="" />
-              </div>
-
-              <div class="md:col-span-2">
-                <label for="country">Country / region</label>
-                <div class="h-10 bg-gray-50 flex border border-gray-200 rounded items-center mt-1">
-                  <input name="country" id="country" placeholder="Country" class="px-4 appearance-none outline-none text-gray-800 w-full bg-transparent"  />
-                  <button tabindex="-1" class="cursor-pointer outline-none focus:outline-none transition-all text-gray-300 hover:text-red-600">
-                    <svg class="w-4 h-4 mx-2 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                      <line x1="18" y1="6" x2="6" y2="18"></line>
-                      <line x1="6" y1="6" x2="18" y2="18"></line>
-                    </svg>
-                  </button>
-                  <button tabindex="-1" for="show_more" class="cursor-pointer outline-none focus:outline-none border-l border-gray-200 transition-all text-gray-300 hover:text-blue-600">
-                    <svg class="w-4 h-4 mx-2 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
-                  </button>
+              <div class="-mx-3 flex flex-wrap">
+                <div class="w-full px-3 sm:w-1/2">
+                  <div class="mb-5">
+                    <label
+                      for="fName"
+                      class="mb-3 block text-base font-medium text-white"
+                    >
+                      Départ
+                    </label>
+                    <input
+                      type="text"
+                      name="fName"
+                      id="fName"
+                      placeholder="First Name"
+                      class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+                    />
+                  </div>
+                </div>
+                <div class="w-full px-3 sm:w-1/2">
+                  <div class="mb-5">
+                    <label
+                      for="lName"
+                      class="mb-3 block text-base font-medium text-white"
+                    >
+                      Déstination
+                    </label>
+                    <input
+                      type="text"
+                      name="lName"
+                      id="lName"
+                      placeholder="Last Name"
+                      class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+                    />
+                  </div>
                 </div>
               </div>
 
-              <div class="md:col-span-2">
-                <label for="state">State / province</label>
-                <div class="h-10 bg-gray-50 flex border border-gray-200 rounded items-center mt-1">
-                  <input name="state" id="state" placeholder="State" class="px-4 appearance-none outline-none text-gray-800 w-full bg-transparent" value="" />
-                  <button tabindex="-1" class="cursor-pointer outline-none focus:outline-none transition-all text-gray-300 hover:text-red-600">
-                    <svg class="w-4 h-4 mx-2 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                      <line x1="18" y1="6" x2="6" y2="18"></line>
-                      <line x1="6" y1="6" x2="18" y2="18"></line>
-                    </svg>
-                  </button>
-                  <button tabindex="-1" for="show_more" class="cursor-pointer outline-none focus:outline-none border-l border-gray-200 transition-all text-gray-300 hover:text-blue-600">
-                    <svg class="w-4 h-4 mx-2 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
-                  </button>
+              <div class="-mx-3 flex flex-wrap">
+                <div class="w-full px-3 sm:w-1/2">
+                  <div class="mb-5">
+                    <label
+                      for="date"
+                      class="mb-3 block text-base font-medium text-white"
+                    >
+                      Date
+                    </label>
+                    <input
+                      type="date"
+                      name="date"
+                      id="date"
+                      min={now}
+                      class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+                    />
+                  </div>
+                </div>
+                <div class="w-full px-3 sm:w-1/2">
+                  <div class="mb-5">
+                    <label
+                      for="time"
+                      class="mb-3 block text-base font-medium text-white"
+                    >
+                      Heure
+                    </label>
+                    <input
+                      type="time"
+                      name="time"
+                      id="time"
+                      class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+                    />
+                  </div>
                 </div>
               </div>
 
-              <div class="md:col-span-1">
-                <label for="zipcode">Zipcode</label>
-                <input type="text" name="zipcode" id="zipcode" class="transition-all flex items-center h-10 border mt-1 rounded px-4 w-full bg-gray-50" placeholder="" />
-              </div>
-
-          
-
-              <div class="md:col-span-2">
-                <label for="soda">Commbien de place ?</label>
-                <div class="h-10 w-28 bg-gray-50 flex border border-gray-200 rounded items-center mt-1">
-                  <button tabindex="-1" for="show_more" class="cursor-pointer outline-none focus:outline-none border-r border-gray-200 transition-all text-gray-500 hover:text-blue-600">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mx-2" viewBox="0 0 20 20" fill="currentColor">
-                      <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-                    </svg>
-                  </button>
-                  <input name="soda" id="soda" placeholder="0" class="px-2 text-center appearance-none outline-none text-gray-800 w-full bg-transparent" value="0" />
-                  <button tabindex="-1" for="show_more" class="cursor-pointer outline-none focus:outline-none border-l border-gray-200 transition-all text-gray-500 hover:text-blue-600">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mx-2 fill-current" viewBox="0 0 20 20" fill="currentColor">
-                      <path fill-rule="evenodd" d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clip-rule="evenodd" />
-                    </svg>
-                  </button>
+              <div class="mb-5">
+                <label class="mb-3 block text-base font-medium text-white">
+                  Payer maintenant?
+                </label>
+                <div class="flex items-center space-x-6">
+                  <div class="flex items-center">
+                    <input
+                      type="radio"
+                      name="radio1"
+                      id="radioButton1"
+                      class="h-5 w-5"
+                    />
+                    <label
+                      for="radioButton1"
+                      class="pl-3 text-base font-medium text-white"
+                    >
+                      Oui
+                    </label>
+                  </div>
+                  <div class="flex items-center">
+                    <input
+                      type="radio"
+                      name="radio1"
+                      id="radioButton2"
+                      class="h-5 w-5"
+                    />
+                    <label
+                      for="radioButton2"
+                      class="pl-3 text-base font-medium text-white"
+                    >
+                      Non
+                    </label>
+                  </div>
                 </div>
               </div>
-              <div class="md:col-span-5">
-                <div class="inline-flex items-center">
-                  <input type="checkbox" name="billing_same" id="billing_same" class="form-checkbox" />
-                  <label for="billing_same" class="ml-2">My billing address is different than above.</label>
-                </div>
-              </div>
-      
-              <div class="md:col-span-5 text-right">
-                <div class="inline-flex items-end">
-                  <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Payer</button>
-                </div>
-              </div>
 
-            </div>
+              <div>
+                <button class="hover:shadow-form rounded-md bg-[#42EAF7] py-3 px-8 text-center text-base font-semibold text-black outline-none">
+                  Reserver
+                </button>
+              </div>
+            </form>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</div>
-<Footer/>
-</>  
-  )
-}
+      <Footer />
+    </>
+  );
+};
 
 export default PageReservation;

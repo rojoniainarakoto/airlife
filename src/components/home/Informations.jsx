@@ -1,13 +1,13 @@
 import React from 'react';
-import { achat } from '../../assets';
+import { TransportB } from '../../assets';
 
 const Informations = () => {
   return (
     <div className='w-full bg-gradient-to-r from-[#117879] to-[#1D00BC] py-16 px-4'>
         <div className='max-w-[1240px] mx-auto grid md:grid-cols-2'>
-        <img className='w-[500px] mx-auto my-4' src={achat} alt="achat" />
+        <img className='w-[500px] mx-auto my-4' src={ TransportB } alt="achat" />
         <div className='flex flex-col justify-center'> 
-            <p className='text-[#9DFDFF] font-bold uppercase'>Faites vos courses comme si vous étiez sur place sans vous déplacer.</p>
+            <p className='text-[#9DFDFF] font-bold uppercase'>Réservez votre voyage et votre transport en toute simplicité avec AirLife.</p>
             <h1 className='md:text-4xl sm:text-3xl text-2xl font-bold py-2 text-white'> </h1>
             <p className='text-white'>
             Sur cette plateforme, vous pouvez faire tout ce que vous souhaitez sans vous déplacer. 

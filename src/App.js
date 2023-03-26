@@ -6,7 +6,8 @@ import Exchange from "./components/Exchange/Exchange";
 import Home from "./components/home/Home";
 
 import Tourisme from "./components/Tourisme/Tourisme";
-import Transport from "./components/Transport/Transport";
+import Login from "./components/login/Login";
+import Signup from "./components/signup/Signup";
 import PageReservation from "./components/Transport/Reservation/PageReservation";
 
 function App() {
@@ -16,10 +17,11 @@ function App() {
       <Route path="/" element={ <Home/>}/>
       <Route path="/about" element={<About/>}/>
       <Route path="/contact" element={<Contact/>}/>
-      <Route path="/pageReservation" element={<PageReservation/>}/>
+      <Route path="/reservation" element={<PageReservation/>}/>
       <Route path="/tourisme" element={<Tourisme/>}/>
       <Route path="/exchange" element={<Exchange/>}/>
-      <Route path="/transport" element={<Transport/>}/>
+      <Route path="/login" element={<Login/>}/>
+      <Route path="/signup" element={<Signup/>}/>
       
     </Routes>
     
