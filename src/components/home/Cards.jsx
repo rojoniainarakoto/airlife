@@ -3,7 +3,7 @@ import { tourisme, Exchange, transport } from '../../assets';
 
 const Cards = () => {
     return (
-        <div className='w-full py-[10rem] px-4 bg-white'>
+        <div className='w-full py-[10rem] px-4 bg-white' id="info">
             <div className='max-w-[1240px]  mx-auto grid md:grid-cols-3 gap-8'>
                 <div className='w-full shadow-xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300'>
                     <img className='w-20 mx-auto mt-[-3rem] bg-white' src={Exchange} alt="/" />
@@ -14,7 +14,9 @@ const Cards = () => {
                         <p className='py-2 border-b mx-8'>Peux echanger en tous temps</p>
                         <p className='py-2 border-b mx-8'>Echange illimité</p>
                     </div>
-                    <button className='bg-[#00df9a] md:w-[200px] sm:w-[100px] rounded-md font-medium my-6 mx-auto px-6 py-3'>S'inscrire</button>
+                    <button className='bg-[#1D00BC] md:w-[200px] sm:w-[100px] rounded-md font-medium my-6 mx-auto px-6 py-3 text-white'>
+                        <a href='/signup'>S'inscrire</a>
+                    </button>
                 </div>
                 <div className='w-full shadow-xl flex flex-col p-4 md:my-0 my-8 rounded-lg hover:scale-105 duration-300'>
                     <img className='w-20 mx-auto mt-[-3rem] bg-transparent' src={transport} alt="/" />
@@ -25,7 +27,9 @@ const Cards = () => {
                         <p className='py-2 border-b mx-8'>N'import où</p>
                         <p className='py-2 border-b mx-8'>Accès illimité</p>
                     </div>
-                    <button className='bg-[#00df9a] md:w-[200px] sm:w-[100px] rounded-md font-medium my-6 mx-auto px-6 py-3'>S'inscrire</button>
+                    <button className='bg-[#1D00BC] md:w-[200px] sm:w-[100px] rounded-md font-medium my-6 mx-auto px-6 py-3 text-white'>
+                        <a href='/signup'>S'inscrire</a>
+                    </button>
                 </div>
                 <div className='w-full shadow-xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300'>
                     <img className='w-20 mx-auto mt-[-3rem] bg-white' src={tourisme} alt="/" />
@@ -36,7 +40,9 @@ const Cards = () => {
                         <p className='py-2 border-b mx-8'>Le plus proce</p>
                         <p className='py-2 border-b mx-8'>Tous budget</p>
                     </div>
-                    <button className='bg-[#00df9a] md:w-[200px] sm:w-[100px] rounded-md font-medium my-6 mx-auto px-6 py-3'>S'inscrire</button>
+                    <button className='bg-[#1D00BC] md:w-[200px] sm:w-[100px] rounded-md font-medium my-6 mx-auto px-6 py-3 text-white'>
+                        <a href='/signup'>S'inscrire</a>    
+                    </button>
                 </div>
             </div>
         </div>

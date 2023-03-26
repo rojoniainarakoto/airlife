@@ -26,7 +26,7 @@ const Navbar = () => {
                     <Link to="/tourisme">Tourisme</Link>
                 </li>
                 <li className='p-4 hover:underline decoration-dashed'>
-                    <Link to="/contact">Nous contacter</Link>
+                    <Link to="#info">A propos</Link>
                 </li>
             </ul>
             <div onClick={handleNav} className='block md:hidden'>
@@ -49,7 +49,7 @@ const Navbar = () => {
                     <Link to="/tourisme">Tourisme</Link>
                 </li>
                 <li className='p-4 hover:underline decoration-dashed'>
-                    <Link to="/contact">Nous contacter</Link>
+                    <Link to="#info">A propos</Link>
                 </li>
                 </ul>
             </div>
