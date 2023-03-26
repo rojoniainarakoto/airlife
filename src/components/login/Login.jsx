@@ -37,7 +37,7 @@ export default function Login() {
 
         <div className='bg-gradient-to-r from-[#14028E] to-[#1D00BC] justify-center bg-transparent'>
             <form className='max-w-[400px] w-full mx-auto rounded-lg bg-transparent mt-6' onSubmit={handleSubmit}>
-                <h4 className='text-3xl dark:text-white text-bold text-center mb-2'>S'identier</h4>
+                <h4 className='text-3xl dark:text-white text-bold text-center mb-2'>S'identifier</h4>
                 <div className='flex flex-col text-gray-400 py-2 mt-10'>
                     <label className='text-white'>E-mail</label>
                     <input className='rounded-lg mt-2 p-2 focus:border-blue-500  focus:outline-none text-black text-bold' type="text" value={mail} onChange={handleMailChange}/>

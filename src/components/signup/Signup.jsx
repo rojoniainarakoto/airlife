@@ -39,7 +39,7 @@ const Signup = () => {
         event.preventDefault();
         if (password === confirmPwd) {
           if (isStrongPassword(password)) {
-            setMessage("Les mots de passe doivent contenir au moins une lettre minuscule");
+            window.location.href = '/hone';
           } else {
             setMessage("Les mots de passe correspondent mais ne sont pas suffisamment complexes");
           }
@@ -49,10 +49,12 @@ const Signup = () => {
       }
 
       function isStrongPassword(password) {
-        const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+        const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{8,}$/;
         return regex.test(password);
       }
 
+
+  
   return (
     <div className=' bg-[#1D00BC] grid grid-cols-1 sm:grid-cols-2 h-screen w-full '>
         <div className="hidden sm:block w-full h-screen bg-no-repeat bg-cover bg-opacity-30 text-white" style={{backgroundImage: `url(${background})`}}>
