@@ -13,13 +13,13 @@ const Newsletter = () => {
                 <div className='my-4'>
                     <div className='flex flex-col sm:flex-row items-center justify-between w-full'>
                         <input className='p-3 flex w-full rounded-md text-black' type="email" placeholder='Tapez votre adresse email' />
-                        <button className='bg-[#00df9a] text-black rounded-md font-medium w-[200px] ml-4 my-6 px-6 py-3'>
+                        <button className='bg-[#9DFDFF] text-black rounded-md font-medium w-[200px] ml-4 my-6 px-6 py-3'>
                             Me notifier
                         </button>
                     </div>
                     <p>
                         On respect vos donnée personelle. Lire notre {' '}
-                        <span className='text-[#00df9a]'>Politique.</span>
+                        <span className='text-[#9DFDFF]'>Politique.</span>
                     </p>
                 </div>
             </div>
