@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { data } from '../data/data.js';
+import { data } from '../../data/data.js';
 
-const Food = () => {
+const Comperatives = () => {
   //   console.log(data);
   const [foods, setFoods] = useState(data);
 
@@ -14,19 +14,12 @@ const Food = () => {
     );
   };
 
-  //   Filter by price
-  const filterPrice = (price) => {
-    setFoods(
-      data.filter((item) => {
-        return item.price === price;
-      })
-    );
-  };
+  
 
   return (
     <div className='max-w-[1640px] m-auto px-4 py-12'>
       <h1 className='text-blue-600 font-bold text-4xl text-center'>
-        Liste des hotels disponible
+        Liste des cooperatives
       </h1>
 
       {/* Filter Row */}
@@ -46,6 +39,12 @@ const Food = () => {
               className='m-1 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white'
             >
              
+            </button>
+            <button
+              onClick={() => filterType('salad')}
+              className='m-1 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white'
+            >
+            
             </button>
             
           </div>
@@ -77,4 +76,4 @@ const Food = () => {
   );
 };
 
-export default Food;
+export default Comperatives;

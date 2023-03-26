@@ -20,7 +20,7 @@ const Hero = () => {
               C'est une plateforme de gestion de portefeuil et d'achat en ligne. Gérer sans déplacer.
             </p>
             <button className='bg-[#9DFDFF] w-[200px] rounded-md font-medium my-6 mx-auto py-2 text-black'>
-              En savoir plus
+              <a href='/login'>En savoir plus</a>
             </button>
         </div>
     </div>

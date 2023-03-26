@@ -11,21 +11,21 @@ const Navbar = () => {
     return (
         <div className='flex justify-between items-center h-24 max-w-[1240px] mx-auto px-4 text-white'>
 
-            <img src={logo} alt="logo" className='w-[150px] h-[70px]'/>
+            <img src={logo} alt="logo" className='w-[150px] h-[80px]'/>
             <ul className='hidden md:flex'>
-                <li className='p-4 hover:text-[#c63b3b] transition-5'>
+                <li className='p-4 hover:underline decoration-dashed transition-5'>
                     <Link to="/">Accueil</Link>
                 </li>
-                <li className='p-4 hover:text-[#c63b3b] cursor:pointer'>
+                <li className='p-4 hover:underline decoration-dashed cursor:pointer'>
                     <Link to="/exchange">Exchange</Link>
                 </li>
-                <li className='p-4 hover:text-[#c63b3b]'>
+                <li className='p-4 hover:underline decoration-dashed'>
                     <Link to="/transport">Transport</Link>
                 </li>
-                <li className='p-4 hover:text-[#c63b3b]'>
+                <li className='p-4 hover:underline decoration-dashed'>
                     <Link to="/tourisme">Tourisme</Link>
                 </li>
-                <li className='p-4 hover:text-[#c63b3b]'>
+                <li className='p-4 hover:underline decoration-dashed'>
                     <Link to="/contact">Nous contacter</Link>
                 </li>
             </ul>
@@ -34,21 +34,21 @@ const Navbar = () => {
 
             </div>
             <div className={!nav ? 'fixed left-[-100%]' : 'fixed left-0 top-0 w-[60%] h-full border-r border-r-gray-900 bg-[#000300] ease-in-out duration-500 '}>
-                <h1 className='w-full text-3xl font-bold text-[#c63b3b] m-4'>AirLife</h1>
+                <img src={logo} alt="logo" className='w-[150px] h-[70px]'/>
                 <ul className='uppercase p-4'>
-                <li className='p-4 hover:text-[#c63b3b] transition-5'>
+                <li className='p-4 hover:underline decoration-dashed transition-5'>
                     <Link to="/">Accueil</Link>
                 </li>
-                <li className='p-4 hover:text-[#c63b3b] cursor:pointer'>
+                <li className='p-4 hover:underline decoration-dashed cursor:pointer'>
                     <Link to="/exchange">Exchange</Link>
                 </li>
-                <li className='p-4 hover:text-[#c63b3b]'>
+                <li className='p-4 hover:underline decoration-dashed'>
                     <Link to="/transport">Transport</Link>
                 </li>
-                <li className='p-4 hover:text-[#c63b3b]'>
+                <li className='p-4 hover:underline decoration-dashed'>
                     <Link to="/tourisme">Tourisme</Link>
                 </li>
-                <li className='p-4 hover:text-[#c63b3b]'>
+                <li className='p-4 hover:underline decoration-dashed'>
                     <Link to="/contact">Nous contacter</Link>
                 </li>
                 </ul>
